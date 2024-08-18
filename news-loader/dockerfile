@@ -1,0 +1,15 @@
+FROM python:3.8
+
+COPY dataset.csv /app/dataset.csv
+
+COPY requirements.txt /app/requirements.txt
+
+RUN pip install -r /app/requirements.txt
+
+COPY src /app/src
+
+COPY commands.sh /app/commands.sh
+
+WORKDIR /app
+
+ENTRYPOINT ["tail", "-f", "/dev/null"]

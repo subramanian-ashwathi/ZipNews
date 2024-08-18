@@ -1,0 +1,25 @@
+body {
+    font-family: 'Josefin Sans';
+    background-color: #D5EEEF;
+    text-decoration: none;
+    max-height: 100vh;
+    max-height: 100dvh;
+    
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+.map {
+    width: 90%;
+    height: 50%;
+    margin: 5% auto;
+}

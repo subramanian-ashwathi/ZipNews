@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: zipnews-api-svc
+  labels:
+    app: zipnews-api
+spec:
+  ports:
+    - name: zipnews-api
+      protocol: "TCP"
+      port: 5005
+      targetPort: 5005
+  selector:
+    app: zipnews-api
+  type: NodePort

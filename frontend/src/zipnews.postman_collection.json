@@ -1,0 +1,197 @@
+{
+	"info": {
+		"_postman_id": "59b39a46-6e8f-44d0-bed1-0b7a533fe1ca",
+		"name": "zipnews",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7773827"
+	},
+	"item": [
+		{
+			"name": "get news",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5005/v1/news?start_time=2023-01-17%2000:00:00&end_time=2023-01-18%2022:59:59&state_code=CA",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5005",
+					"path": [
+						"v1",
+						"news"
+					],
+					"query": [
+						{
+							"key": "start_time",
+							"value": "2023-01-17%2000:00:00"
+						},
+						{
+							"key": "end_time",
+							"value": "2023-01-18%2022:59:59"
+						},
+						{
+							"key": "state_code",
+							"value": "CA"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get_news_1",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5005/v1/news?start_time=2023-01-17%2000:00:00&end_time=2023-01-18%2022:59:59&state_code=CA",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5005",
+							"path": [
+								"v1",
+								"news"
+							],
+							"query": [
+								{
+									"key": "start_time",
+									"value": "2023-01-17%2000:00:00"
+								},
+								{
+									"key": "end_time",
+									"value": "2023-01-18%2022:59:59"
+								},
+								{
+									"key": "state_code",
+									"value": "CA"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.2.3 Python/3.9.6"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 22 Apr 2023 20:46:46 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2185"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"news\": [\n        {\n            \"image_url\": \"https://cdn.vox-cdn.com/thumbor/MZahB_4irOiT-6mmtYBnYuV8FVk=/0x181:2122x1292/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/24366438/GettyImages_522933314.jpg\",\n            \"location\": \"Los Angeles, California, United States\",\n            \"pub_time\": \"2023-01-17 21:45:00\",\n            \"semantic_score\": -1.146,\n            \"title\": \"When will egg prices finally go down ? \",\n            \"url\": \"https://www.vox.com/2023/1/17/23559013/egg-prices-bird-flu-inflation-avian-influenza\"\n        },\n        {\n            \"image_url\": \"https://media.nbclosangeles.com/2023/01/107177246-1673454132712-gettyimages-1246154739-AFP_336V8DZ.jpeg?quality=85&strip=all\",\n            \"location\": \"California, United States\",\n            \"pub_time\": \"2023-01-18 14:15:00\",\n            \"semantic_score\": 0.78,\n            \"title\": \"Stocks Making the Biggest Moves Premarket : United Airlines , Moderna , IBM and More\",\n            \"url\": \"https://www.nbclosangeles.com/news/business/money-report/stocks-making-the-biggest-moves-premarket-united-airlines-moderna-ibm-and-more/3075887/\"\n        },\n        {\n            \"image_url\": \"https://media.nbcsandiego.com/2022/02/GettyImages-1041117276-e1664908264516.jpg?quality=85&strip=all\",\n            \"location\": \"California, United States\",\n            \"pub_time\": \"2023-01-18 00:30:00\",\n            \"semantic_score\": 1.865,\n            \"title\": \"$51 . 3M Erased From Overdue SDG & E Bills . Here How to Check Your Bill\",\n            \"url\": \"https://www.nbcsandiego.com/news/local/51-3m-erased-from-overdue-sdge-bills-heres-how-to-check-your-bill/3144989/\"\n        },\n        {\n            \"image_url\": \"https://www.comminit.com/files/cbpr2.png\",\n            \"location\": \"California, United States\",\n            \"pub_time\": \"2023-01-17 12:15:00\",\n            \"semantic_score\": -1.988,\n            \"title\": \"Inclusionary Trials : A Review of Lessons Not Learned\",\n            \"url\": \"https://www.comminit.com/global/content/inclusionary-trials-review-lessons-not-learned\"\n        },\n        {\n            \"image_url\": \"https://bloximages.newyork1.vip.townnews.com/wallowa.com/content/tncms/assets/v3/editorial/7/6f/76f1b73a-91d4-11ed-81a9-83d625faf61e/63bef03b49ee2.image.jpg?crop=1747%2C917%2C0%2C134\",\n            \"location\": \"California, United States\",\n            \"pub_time\": \"2023-01-18 19:30:00\",\n            \"semantic_score\": 1.411,\n            \"title\": \" ' Mock Newbery Project ' showcases books to kids | Local News\",\n            \"url\": \"https://www.wallowa.com/news/local/mock-newbery-project-showcases-books-to-kids/article_147ca970-91d4-11ed-b788-5f9ef110d8d2.html\"\n        }\n    ],\n    \"status\": \"Success\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get count",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5005/v1/count?date=2023-01-10",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5005",
+					"path": [
+						"v1",
+						"count"
+					],
+					"query": [
+						{
+							"key": "date",
+							"value": "2023-01-10"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get_count_1",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5005/v1/count?date=2023-01-10",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5005",
+							"path": [
+								"v1",
+								"count"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "2023-01-10"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.2.3 Python/3.9.6"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 22 Apr 2023 20:46:40 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "399"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "[{\"state\":\"AK\",\"count\":5},{\"state\":\"AL\",\"count\":11},{\"state\":\"AR\",\"count\":6},{\"state\":\"AZ\",\"count\":16},{\"state\":\"CA\",\"count\":226},{\"state\":\"CO\",\"count\":16},{\"state\":\"CT\",\"count\":14},{\"state\":\"DC\",\"count\":171},{\"state\":\"DE\",\"count\":7},{\"state\":\"FL\",\"count\":57},{\"state\":\"GA\",\"count\":25},{\"state\":\"HI\",\"count\":7},{\"state\":\"IA\",\"count\":9},{\"state\":\"ID\",\"count\":9},{\"state\":\"IL\",\"count\":66},{\"state\":\"IN\",\"count\":10},{\"state\":\"KS\",\"count\":6},{\"state\":\"KY\",\"count\":17},{\"state\":\"LA\",\"count\":22},{\"state\":\"MA\",\"count\":59},{\"state\":\"MD\",\"count\":12},{\"state\":\"ME\",\"count\":10},{\"state\":\"MI\",\"count\":40},{\"state\":\"MN\",\"count\":18},{\"state\":\"MO\",\"count\":19},{\"state\":\"MS\",\"count\":6},{\"state\":\"MT\",\"count\":1},{\"state\":\"NC\",\"count\":28},{\"state\":\"ND\",\"count\":5},{\"state\":\"NE\",\"count\":8},{\"state\":\"NH\",\"count\":7},{\"state\":\"NJ\",\"count\":26},{\"state\":\"NM\",\"count\":6},{\"state\":\"NV\",\"count\":8},{\"state\":\"NY\",\"count\":169},{\"state\":\"OH\",\"count\":13},{\"state\":\"OK\",\"count\":13},{\"state\":\"OR\",\"count\":19},{\"state\":\"PA\",\"count\":26},{\"state\":\"PR\",\"count\":1},{\"state\":\"RI\",\"count\":5},{\"state\":\"SC\",\"count\":9},{\"state\":\"SD\",\"count\":5},{\"state\":\"TN\",\"count\":9},{\"state\":\"TX\",\"count\":66},{\"state\":\"UT\",\"count\":4},{\"state\":\"VA\",\"count\":16},{\"state\":\"VT\",\"count\":14},{\"state\":\"WA\",\"count\":29},{\"state\":\"WI\",\"count\":13},{\"state\":\"WV\",\"count\":9},{\"state\":\"WY\",\"count\":9}]"
+
+				}
+			]
+		}
+	]
+}

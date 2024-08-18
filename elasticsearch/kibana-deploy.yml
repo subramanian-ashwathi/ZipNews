@@ -1,0 +1,13 @@
+apiVersion: kibana.k8s.elastic.co/v1
+kind: Kibana
+metadata:
+  name: zipnews
+spec:
+  version: 8.7.0
+  count: 1
+  elasticsearchRef:
+    name: zipnews
+  http:
+    service:
+        spec:
+            type: LoadBalancer

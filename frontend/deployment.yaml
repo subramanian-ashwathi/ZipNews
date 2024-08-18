@@ -1,0 +1,26 @@
+apiVersion: apps/v1 #  for k8s versions before 1.9.0 use apps/v1beta2  and before 1.8.0 use extensions/v1beta1
+kind: Deployment
+metadata:
+  name: zipnews-ui
+spec:
+  selector:
+    matchLabels:
+      app: zipnews-ui
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: zipnews-ui
+    spec:
+      containers:
+      - name: master
+        image: zipnews-ui:dev
+        resources:
+          requests:
+            cpu: 100m
+            memory: 200Mi
+        ports:
+        - containerPort: 3000
+        env:
+        - name: VERSION
+          value: "v1"

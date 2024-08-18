@@ -1,0 +1,43 @@
+{
+    "mappings": {
+        "properties": {
+            "published_time": {
+                "type": "date",
+                "format": "yyyy-MM-dd HH:mm:ss"
+            },
+            "url": {
+                "type": "text"
+            },
+            "title": {
+                "type": "text"
+            },
+            "image_url": {
+                "type": "text"
+            },
+            "doc_tone": {
+                "type": "float"
+            },
+            "location": {
+                "type": "text"
+            },
+            "state_code": {
+                "type": "keyword"
+            },
+            "contextual_text": {
+                "type": "text"
+            },
+            "coordinates": {
+                "type": "geo_point"
+            },
+            "highlight_words": {
+                "type": "text"
+            },
+            "catogery": {
+                "type": "text"
+            },
+            "source": {
+                "type": "text"
+            }
+        }
+    }
+}

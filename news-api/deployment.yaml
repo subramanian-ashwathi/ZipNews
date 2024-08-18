@@ -1,0 +1,42 @@
+apiVersion: apps/v1 #  for k8s versions before 1.9.0 use apps/v1beta2  and before 1.8.0 use extensions/v1beta1
+kind: Deployment
+metadata:
+  name: zipnews-api
+spec:
+  selector:
+    matchLabels:
+      app: zipnews-api
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: zipnews-api
+    spec:
+      containers:
+      - name: master
+        image: zipnews-api:dev
+        resources:
+          requests:
+            cpu: 100m
+            memory: 200Mi
+        ports:
+        - containerPort: 5005
+        env:
+        - name: VERSION
+          value: "v1"
+        - name: ES_USER
+          value: "elastic"
+        - name: ES_HOST
+          value: "zipnews-es-http:9200"
+        - name: ES_INDEX
+          value: "news-v1"
+        - name: ES_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: zipnews-es-elastic-user
+              key: elastic
+        - name: ES_CERT
+          valueFrom:
+            secretKeyRef:
+              name: zipnews-es-http-certs-public
+              key: tls.crt

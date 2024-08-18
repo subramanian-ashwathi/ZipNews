@@ -1,0 +1,51 @@
+apiVersion: apps/v1 #  for k8s versions before 1.9.0 use apps/v1beta2  and before 1.8.0 use extensions/v1beta1
+kind: Deployment
+metadata:
+  name: zipnews-news-loader
+spec:
+  selector:
+    matchLabels:
+      app: zipnews-news-loader
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: zipnews-news-loader
+    spec:
+      containers:
+      - name: master
+        image: zipnews-news-loader:dev
+        resources:
+          requests:
+            cpu: 100m
+            memory: 200Mi
+        volumeMounts:
+          - mountPath: "/var/gcloud-iam"
+            name: gcloud-iam
+        env:
+        - name: VERSION
+          value: "v1"
+        - name: SERVICE_ACCOUNT_FILE
+          value: "/var/gcloud-iam/gcloud-iam"
+        - name: LOAD_FROM_BQ
+          value: "0"
+        - name: LOCAL_DATASET
+          value: "/app/dataset.csv"
+        - name: ES_USER
+          value: "elastic"
+        - name: ES_HOST
+          value: "zipnews-es-http:9200"
+        - name: ES_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: zipnews-es-elastic-user
+              key: elastic
+        - name: ES_CERT
+          valueFrom:
+            secretKeyRef:
+              name: zipnews-es-http-certs-public
+              key: tls.crt
+      volumes:
+        - name: gcloud-iam
+          secret:
+            secretName: gcloud-iam

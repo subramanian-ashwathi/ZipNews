@@ -1,0 +1,6 @@
+# zipnews.postman_collection.json
+/.ipynb_checkpoints
+/Category
+
+# ignore dataset.csv
+news-loader/dataset.csv
